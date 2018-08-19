@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-08-18T15:07:40Z" name="Default suite" finished-at="2018-08-18T15:08:29Z" duration-ms="49718">
+    <groups>
+    </groups>
+    <test started-at="2018-08-18T15:07:40Z" name="Default test" finished-at="2018-08-18T15:08:29Z" duration-ms="49718">
+      <class name="executionEngine.DriverScriptTest">
+        <test-method signature="Intitialize()[pri:0, instance:executionEngine.DriverScriptTest@7c1e2a9e]" started-at="2018-08-18T15:07:40Z" name="Intitialize" finished-at="2018-08-18T15:08:29Z" duration-ms="49676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Intitialize -->
+      </class> <!-- executionEngine.DriverScriptTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

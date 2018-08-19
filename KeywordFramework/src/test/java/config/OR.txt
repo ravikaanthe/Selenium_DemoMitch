@@ -1,0 +1,29 @@
+# Home Page Objects
+#btn_MyAccount=.//*[@id='account']
+b#tn_LogOut=.//*[@id='account_logout']
+
+# Login Page Object
+#txtbx_UserName=.//*[@id='log']
+#txtbx_Password=.//*[@id='pwd']
+#btn_LogIn=.//*[@id='login']
+
+# Login Page Objects
+txtbx_UserName=/html/body/div[2]/div/div[3]/form/div/input[1]
+txtbx_Password=/html/body/div[2]/div/div[3]/form/div/input[2]
+btn_LogIn=/html/body/div[2]/div/div[3]/form/div/div/input
+
+# Home Page Objects
+lbl_userTitle=/html/body/div/div/div/div/div[2]/div[1]/section[1]/div
+lnk_contact=//a[contains(text(),'Contacts')]
+lnk_newContact=//a[contains(text(),'New Contact')]
+
+# Contacts Page Objects
+txtbx_FirstName=/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/fieldset[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/input[1]
+txtbx_LastName=/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/fieldset[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[4]/td[2]/input[1]
+btn_Save=/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/fieldset[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/input[2]
+lnk_LogOut=/html[1]/body[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[1]/tr[1]/td[4]/a[1]
+
+# Advance Search Page Objects
+txtbx_Name=/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[3]/td[2]/input[1]
+btn_Search=/html[1]/body[1]/table[2]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[1]/td[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[7]/td[2]/input[2]
+tbl_ContactSearch=.//*[@id='vContactsForm']/table/tbody/tr[4]/td[2]
