@@ -17,6 +17,7 @@ public class ActionKeywords {
 	
 	public static WebDriver driver;
 	 
+	//method to open browser
 	public static void openBrowser(String object, String data){	
 		Log.info("Opening Browser");
 		try{
