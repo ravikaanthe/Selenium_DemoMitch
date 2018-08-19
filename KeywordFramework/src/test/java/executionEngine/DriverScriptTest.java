@@ -16,7 +16,7 @@ public class DriverScriptTest {
 	
 	//Load properties from OR.txt file
 	public static Properties OR;
-	//This is a class object, declared as 'public static'
+	//This is a class object, declared as 'public static'.
 	//So that it can be used outside the scope of main[] method
 	public static ActionKeywords actionKeywords;
 	public static String sActionKeyword;
