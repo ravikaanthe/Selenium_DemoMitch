@@ -1,6 +1,6 @@
 # Home Page Objects
 #btn_MyAccount=.//*[@id='account']
-b#tn_LogOut=.//*[@id='account_logout']
+#btn_LogOut=.//*[@id='account_logout']
 
 # Login Page Object
 #txtbx_UserName=.//*[@id='log']
