@@ -7,8 +7,8 @@ public class Constants {
     //Declared as 'final', so that the value of this variable can be changed
     // 'String' & 'int' are the data type for storing a type of value	
 	public static final String URL = "https://www.freecrm.com/index.html";
-	public static final String Path_TestData = "C://Users//ravik//selenium-Frameworks//KeywordFramework//src//test//java//dataEngine//DataEngine.xlsx";
-	public static final String Path_OR = "C://Users//ravik//selenium-Frameworks//KeywordFramework//src//test//java//config//OR.txt";
+	public static final String Path_TestData = "src/test/java/dataEngine/DataEngine.xlsx";
+	public static final String Path_OR = "src/test/java/config/OR.txt";
 	public static final String File_TestData = "DataEngine.xlsx";
  
 	//List of Data Sheet Column Numbers
