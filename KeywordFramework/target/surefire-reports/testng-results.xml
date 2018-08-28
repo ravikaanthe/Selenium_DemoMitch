@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-08-19T20:32:42Z" name="Suite" finished-at="2018-08-19T20:33:18Z" duration-ms="35939">
+  <suite name="Suite" duration-ms="35174" started-at="2018-08-28T02:47:03Z" finished-at="2018-08-28T02:47:39Z">
     <groups>
     </groups>
-    <test started-at="2018-08-19T20:32:42Z" name="CRMPROTesting" finished-at="2018-08-19T20:33:18Z" duration-ms="35939">
+    <test name="CRMPROTesting" duration-ms="35174" started-at="2018-08-28T02:47:03Z" finished-at="2018-08-28T02:47:39Z">
       <class name="executionEngine.DriverScriptTest">
-        <test-method signature="Intitialize()[pri:0, instance:executionEngine.DriverScriptTest@1e6454ec]" started-at="2018-08-19T20:32:42Z" name="Intitialize" finished-at="2018-08-19T20:33:18Z" duration-ms="35907" status="PASS">
+        <test-method status="PASS" signature="Intitialize()[pri:0, instance:executionEngine.DriverScriptTest@13eb8acf]" name="Intitialize" duration-ms="35143" started-at="2018-08-28T02:47:03Z" finished-at="2018-08-28T02:47:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Intitialize -->

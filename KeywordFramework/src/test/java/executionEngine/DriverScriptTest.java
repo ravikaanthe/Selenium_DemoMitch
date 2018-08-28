@@ -81,6 +81,9 @@ public class DriverScriptTest {
 			sRunMode = ExcelUtils.getCellData(iTestcase, Constants.Col_RunMode,Constants.Sheet_TestCases);
 			//This is the condition statement on RunMode value
 			if (sRunMode.equals("Yes")){
+				//Start publishing the report using Extent Reports in HTML file
+				//ExtentTest Class      StartTest method from ExtentReports Class
+				ActionKeywords.logger=ActionKeywords.reports.startTest(sTestCaseID);
 				//Only if the value of Run Mode is 'Yes', this part of code will execute
 				iTestStep = ExcelUtils.getRowContains(sTestCaseID, Constants.Col_TestCaseID, Constants.Sheet_TestSteps);
 				iTestLastStep = ExcelUtils.getTestStepsCount(Constants.Sheet_TestSteps, sTestCaseID, iTestStep);
@@ -107,6 +110,12 @@ public class DriverScriptTest {
 						break;
 						}
 		    		}
+				
+				//End logging after executing every test case from Test Case sheet using endTest method from ExtentReports class 
+
+				ActionKeywords.reports.endTest(actionKeywords.logger);
+
+				ActionKeywords.reports.flush();
 				
 				//This will only execute after the last step of the test case, if value is not 'false' at any step	
 				if(bResult==true){
