@@ -6,11 +6,12 @@ public class Constants {
     //Declared as 'static', so that we do not need to instantiate a class object
     //Declared as 'final', so that the value of this variable can be changed
     // 'String' & 'int' are the data type for storing a type of value	
-	public static final String URL = "https://www.freecrm.com/index.html";
+	public static final String URL = "https://classic.crmpro.com/index.html";
 	public static final String Path_TestData = "src/test/java/dataEngine/DataEngine.xlsx";
-	public static final String Extent_Reports = "src/test/java/Reports/Report.html";
+	public static final String Extent_Reports = "Report.html";
 	public static final String Path_OR = "src/test/java/config/OR.txt";
 	public static final String File_TestData = "DataEngine.xlsx";
+	public static final String Driver_Path = "src/test/resources/chromedriver.exe";
  
 	//List of Data Sheet Column Numbers
 	public static final int Col_TestCaseID = 0;	

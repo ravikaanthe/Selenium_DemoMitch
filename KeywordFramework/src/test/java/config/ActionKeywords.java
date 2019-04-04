@@ -50,7 +50,7 @@ public class ActionKeywords {
 				Log.info("IE browser started");
 				}
 			else if(data.equals("Chrome")){
-				System.setProperty("webdriver.chrome.driver", "C:\\Selenium Automation\\Software\\chromedriver_win32\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", Constants.Driver_Path);
 				driver=new ChromeDriver();
 				logger.log(LogStatus.PASS, "opened Browser -"+ data);
 				Log.info("Chrome browser started");

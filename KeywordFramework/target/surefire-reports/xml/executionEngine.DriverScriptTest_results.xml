@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="35.143">
+           time="33.964">
   <properties />
   
   
-            <testcase name="Intitialize" time="35.143" classname="executionEngine.DriverScriptTest" />
+            <testcase name="Intitialize" time="33.964" classname="executionEngine.DriverScriptTest" />
       
 </testsuite>
