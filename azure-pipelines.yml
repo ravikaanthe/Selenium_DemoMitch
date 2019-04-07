@@ -1,0 +1,54 @@
+# Maven
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-2019'
+
+steps:
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'KeywordFramework/pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    goals: 'test'
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)'
+    Contents: '**/*.jar'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+  condition: succeededOrFailed()
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+  condition: succeededOrFailed()
+
+- task: PublishPipelineArtifact@0
+  displayName: 'Publish Pipeline Artifact'
+  inputs:
+    artifactName: Log4jLog
+    targetPath: 'KeywordFramework/Automation_Logs.log'
+
+- task: PublishPipelineArtifact@0
+  displayName: 'Publish Pipeline Artifact'
+  inputs:
+    artifactName: 'Extent Report'
+    targetPath: 'KeywordFramework/Report.html'
+
+- task: PublishPipelineArtifact@0
+  displayName: 'Publish Pipeline Artifact'
+  inputs:
+    artifactName: 'Excel Results'
+    targetPath: 'KeywordFramework/src/test/java/dataEngine/DataEngine.xlsx'
