@@ -4,7 +4,9 @@ import java.util.concurrent.TimeUnit;
 import static executionEngine.DriverScriptTest.OR;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -196,6 +198,37 @@ public class ActionKeywords {
 			DriverScriptTest.bResult = false;
 		}	
 		
+	}
+	
+	public static void verifyElement(String object, String data){
+		try{
+			Log.info("Verifying the element '"+ object);
+			driver.findElement(By.xpath(OR.getProperty(object))).isDisplayed();
+			elementHighlight(driver.findElement(By.xpath(OR.getProperty(object))));
+			Thread.sleep(600);
+			logger.log(LogStatus.PASS, "Webelement '"+ object+"'displayed on page");
+		}catch(Exception e){
+			Log.error("Unable to find Webelement --- " + e.getMessage());
+			logger.log(LogStatus.FAIL, "Unable to find Webelement "+ object);
+ 			DriverScriptTest.bResult = false;
+		}
+	}
+	
+	public static void elementHighlight(WebElement element) {
+		for (int i = 0; i < 2; i++) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript(
+					"arguments[0].setAttribute('style', arguments[1]);",
+					element, "color: blue; border: 3px solid blue;");
+			js.executeScript(
+					"arguments[0].setAttribute('style', arguments[1]);",
+					element, "");
+		}
+	}
+	
+	public static void voidAccept(String object, String data) throws Exception{
+		driver.switchTo().alert().accept();
+	
 	}
 	
  
