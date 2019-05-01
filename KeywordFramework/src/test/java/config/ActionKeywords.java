@@ -16,6 +16,11 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import executionEngine.DriverScriptTest;
 import utility.Log;
 
@@ -52,7 +57,9 @@ public class ActionKeywords {
 				Log.info("IE browser started");
 				}
 			else if(data.equals("Chrome")){
-				System.setProperty("webdriver.chrome.driver", Constants.Driver_Path);
+				//System.setProperty("webdriver.chrome.driver", Constants.Driver_Path);
+				//Removed above path by introducing maven dependencies ChromeWebDriverManager and Chrome WebDriver
+				WebDriverManager.getInstance(CHROME).setup();
 				driver=new ChromeDriver();
 				logger.log(LogStatus.PASS, "opened Browser -"+ data);
 				Log.info("Chrome browser started");

@@ -11,7 +11,8 @@ public class Constants {
 	public static final String Extent_Reports = "Report.html";
 	public static final String Path_OR = "src/test/java/config/OR.txt";
 	public static final String File_TestData = "DataEngine.xlsx";
-	public static final String Driver_Path = "src/test/resources/chromedriver.exe";
+	//public static final String Driver_Path = "src/test/resources/chromedriver.exe";
+	////Removed above path by introducing maven dependencies ChromeWebDriverManager and Chrome WebDriver
  
 	//List of Data Sheet Column Numbers
 	public static final int Col_TestCaseID = 0;	
